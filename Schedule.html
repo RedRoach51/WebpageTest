@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- Homework for CS-146-A by Erick Lim -->
+<!-- Okay, I'm well aware that this is a very botch job to get this all done but if it fufills the deliverables then it gets delivered. I'm absolutely certain if I let myself have more time with this it could be way better, especially in regards using the select.-->
+<html>
+	<head>
+		<title>
+			HTML Exercise (Erick Lim)
+		</title>
+		<style>
+			table{
+				table-layout:fixed;
+				width:600px;
+			}
+			table,th,td{
+				border:1px solid black;
+			}
+			td{
+				text-align:center;
+			}
+			td.time{
+				text-align:right;
+			}
+			td.null{
+				display: none;
+				background-color:transparent;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		
+		<script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+		<script>
+			function tableUpdate(check){
+				var queryID = "." + check; 
+				$(queryID).toggle();
+			}
+
+			function colorUpdate(check){
+				var queryID = "." + check + "-color";
+				var color = $(queryID).val();
+				var headID = "." + check + "-head";
+				$(headID).css("background-color",color);
+			}
+		</script>
+
+		<h1>
+			Erick Lim's Schedule
+		</h1>
+
+		<ul>
+			<li> <input type="checkbox"  onclick="tableUpdate('ssw567')" checked> 
+			<u>SSW-567-WS</u> Software Testing, Quality Assurance and Maintenance
+			<select class="ssw567-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>				
+			</select>
+			<button onclick="colorUpdate('ssw567')">Set Color</button>
+			</li>
+			<li> <input type="checkbox"  onclick="tableUpdate('ssw555')" checked> 
+			<u>SSW-555-WS</u> Agile methods for Software Development
+			<select class="ssw555-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>
+			</select>
+			<button onclick="colorUpdate('ssw555')">Set Color</button>
+			</li>
+			<li> <input type="checkbox"  onclick="tableUpdate('cs146')" checked> 
+			<u>CS-146-A</u> Intro to Web Programming and Web Development
+			<select class="cs146-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>
+			</select>
+			<button onclick="colorUpdate('cs146')">Set Color</button>
+			</li>
+			<li> <input type="checkbox"  onclick="tableUpdate('ssw315')" checked> 
+			<u>SSW-315-A</u> Object-Oriented Software Engineering
+			<select class="ssw315-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>
+			</select>
+			<button onclick="colorUpdate('ssw315')">Set Color</button>
+			</li>
+			<li> <input type="checkbox"  onclick="tableUpdate('e321')" checked> 
+			<u>E-321-X</u> Engineering Design V
+			<select class="e321-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>
+			</select>
+			<button onclick="colorUpdate('e321')">Set Color</button>
+			</li>
+			<li> <input type="checkbox"  onclick="tableUpdate('pep151')" checked> 
+			<u>PEP-151-B</u> Introduction to Astronomy
+			<select class="pep151-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+				<option value="maroon">Maroon</option>
+			</select>
+			<button onclick="colorUpdate('pep151')">Set Color</button>
+			</li>
+			<li> <input type="checkbox" onclick="tableUpdate('cs561')" checked> 
+			<u>CS-561-A</u> Database Management Systems I
+			<select class="cs561-color">
+				<option value="white">White</option>
+				<option value="red">Red</option>
+				<option value="blue">Blue</option>
+				<option value="yellow">Yellow</option>
+				<option value="green">Green</option>
+				<option value="orange">Orange</option>
+				<option value="purple">Purple</option>
+			</select>
+			<button onclick="colorUpdate('cs561')">Set Color</button>
+			</li>
+		</ul>
+
+		<table>
+			<tr>
+				<th> <b>Time</b></th>
+				<th> <b>Monday</b></th>
+				<th> <b>Tuesday</b></th>
+				<th> <b>Wednesday</b></th>
+				<th> <b>Thursday</b></th>
+				<th> <b>Friday</b></th>
+			</tr>
+			<tr>
+				<td class = "time">9:00 AM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">9:30 AM </td>
+				<td> <!-- Empty --></td>
+				<td class = "pep151 pep151-head" rowspan = "2"> PEP-151 </td>
+				<td class = "null pep151"> </td>
+				<td> <!-- Empty --></td>
+				<td class = "pep151 pep151-head" rowspan = "2"> PEP-151 </td>
+				<td class = "null pep151"> </td>				
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">10:00 AM </td>
+				<td> <!-- Empty --></td>
+				<td class = "null pep151"> </td>				
+				<td> <!-- Empty --></td>
+				<td class = "null pep151"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">10:30 AM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">11:00 AM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">11:30 AM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">12:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td class = "ssw315 ssw315-head" rowspan = "4"> SSW-315 </td>
+				<td class= "null ssw315"> </td>
+			</tr>
+			<tr>
+				<td class = "time">12:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td class = "ssw315 ssw315-head" rowspan = "2"> SSW-315 </td>
+				<td class= "null ssw315"> </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td class= "null ssw315"> </td>			
+			</tr>
+			<tr>
+				<td class = "time">1:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null ssw315"> </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td class= "null ssw315"> </td>		
+			</tr>
+			<tr>
+				<td class = "time">1:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td class= "null ssw315"> </td>
+			</tr>
+			<tr>
+				<td class = "time">2:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">2:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">3:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">3:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td class = "cs146 cs146-head" rowspan = "2"> CS-146 </td>
+				<td class= "cs146 null"> </td>
+				<td> <!-- Empty --></td>
+				<td class = "cs146 cs146-head" rowspan = "2"> CS-146 </td>
+				<td class= "cs146 null"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">4:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs146"> </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs146"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">4:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">5:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">5:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">6:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">6:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td class = "cs561 cs561-head" rowspan = "5"> CS-561 </td>
+				<td class= "null cs561"> </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">7:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs561"> </td>
+				<td> <!-- Empty --></td>
+				<td class = "e321 e321-head" rowspan = "4"> E-321 </td>
+				<td class= "null e321"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">7:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs561"> </td>
+				<td> <!-- Empty --></td>
+				<td class= "null e321"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">8:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs561"> </td>
+				<td> <!-- Empty --></td>
+				<td class= "null e321"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">8:30 PM </td>
+				<td> <!-- Empty --></td>
+				<td class= "null cs561"> </td>
+				<td> <!-- Empty --></td>
+				<td class= "null e321"> </td>
+				<td> <!-- Empty --></td>
+			</tr>
+			<tr>
+				<td class = "time">9:00 PM </td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+				<td> <!-- Empty --></td>
+			</tr>
+			
+			
+
+		</table>
+	</body>
+</html>
